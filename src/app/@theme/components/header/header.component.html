@@ -3,7 +3,7 @@
      [class.right]="position === 'inverse'">
   <div class="logo-containter">
     <a (click)="toggleSidebar()" href="#" class="navigation"><i class="nb-menu"></i></a>
-    <div class="logo" (click)="goToHome()">ngx-<span>admin</span></div>
+    <div class="logo" (click)="goToHome()">پنل <span>مدیریتی</span></div>
   </div>
   <ngx-theme-switcher></ngx-theme-switcher>
 </div>
@@ -13,7 +13,7 @@
   class="header-container"
   [class.right]="position === 'normal'"
   [class.left]="position === 'inverse'">
-  <nb-action icon="nb-grid-b" class="toggle-layout" (click)="toggleSettings()"></nb-action>
+  <!--<nb-action icon="nb-grid-b" class="toggle-layout" (click)="toggleSettings()"></nb-action>-->
   <nb-action *nbIsGranted="['view', 'user']" >
     <nb-user [nbContextMenu]="userMenu" [name]="user?.name" [picture]="user?.picture"></nb-user>
   </nb-action>

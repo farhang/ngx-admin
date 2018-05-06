@@ -2,33 +2,29 @@ import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
-    title: 'Dashboard',
+    title: 'داشبورد',
     icon: 'nb-home',
     link: '/pages/dashboard',
     home: true,
   },
   {
-    title: 'FEATURES',
-    group: true,
-  },
-  {
-    title: 'Auth',
+    title: 'کاربر',
     icon: 'nb-locked',
     children: [
       {
-        title: 'Login',
+        title: 'ورود',
         link: '/auth/login',
       },
       {
-        title: 'Register',
+        title: 'ثبت نام',
         link: '/auth/register',
       },
       {
-        title: 'Request Password',
+        title: 'درخواست رمز عبور جدید',
         link: '/auth/request-password',
       },
       {
-        title: 'Reset Password',
+        title: 'پسورد ریست',
         link: '/auth/reset-password',
       },
     ],

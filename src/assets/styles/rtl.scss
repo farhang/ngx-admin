@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Vazir;
+  src: url('../fonts/vazir/Vazir-FD.eot');
+  src: url('../fonts/vazir/Vazir-FD.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/vazir/Vazir-FD.woff') format('woff'),
+  url('../fonts/vazir/Vazir-FD.ttf') format('truetype');
+  font-weight: normal;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+}
+
+ngx-theme-switcher {
+  text-align: left;
+  direction: ltr;
+}
+
+.nb-theme-default nb-sidebar.menu-sidebar .main-btn span,
+.nb-theme-default nb-sidebar.menu-sidebar .main-btn span {
+  padding-right: 0.25rem;
+  padding-left: 0 !important;
+}
+
+.info-container {
+  margin-left: 0 !important;
+  margin-right: 0.5rem;
+}
+
