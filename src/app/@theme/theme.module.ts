@@ -16,7 +16,7 @@ import {
   NbUserModule,
   NbCheckboxModule,
   NbPopoverModule,
-  NbContextMenuModule,
+  NbContextMenuModule, NbLayoutDirection,
 } from '@nebular/theme';
 
 import { NbSecurityModule } from '@nebular/security';
@@ -26,6 +26,8 @@ import {
   HeaderComponent,
   SearchInputComponent,
   ThemeSettingsComponent,
+  SwitcherComponent,
+  LayoutDirectionSwitcherComponent,
   ThemeSwitcherComponent,
 } from './components';
 import { CapitalizePipe, PluralPipe, RoundPipe, TimingPipe } from './pipes';
@@ -58,6 +60,8 @@ const NB_MODULES = [
 ];
 
 const COMPONENTS = [
+  SwitcherComponent,
+  LayoutDirectionSwitcherComponent,
   ThemeSwitcherComponent,
   HeaderComponent,
   FooterComponent,
@@ -82,10 +86,12 @@ const NB_THEME_PROVIDERS = [
       name: 'default',
     },
     [DEFAULT_THEME, COSMIC_THEME],
+    [], NbLayoutDirection.RTL
   ).providers,
   ...NbSidebarModule.forRoot().providers,
   ...NbMenuModule.forRoot().providers,
 ];
+
 
 @NgModule({
   imports: [...BASE_MODULES, ...NB_MODULES],
