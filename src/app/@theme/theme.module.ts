@@ -40,6 +40,7 @@ import {
 import { DEFAULT_THEME } from './styles/theme.default';
 import { COSMIC_THEME } from './styles/theme.cosmic';
 import {PersianPipesModule} from "ngx-persian-pipe";
+import {KeysPipe} from "./pipes/keys.pipe";
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
@@ -83,6 +84,7 @@ const PIPES = [
   PluralPipe,
   RoundPipe,
   TimingPipe,
+  KeysPipe,
 ];
 
 const NB_THEME_PROVIDERS = [
