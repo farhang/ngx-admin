@@ -31,6 +31,7 @@ import {
   ThemeSwitcherComponent,
 } from './components';
 import { CapitalizePipe, PluralPipe, RoundPipe, TimingPipe } from './pipes';
+import {KeysPipe} from "./pipes/keys.pipe";
 import {
   OneColumnLayoutComponent,
   SampleLayoutComponent,
@@ -40,7 +41,7 @@ import {
 import { DEFAULT_THEME } from './styles/theme.default';
 import { COSMIC_THEME } from './styles/theme.cosmic';
 import {PersianPipesModule} from "ngx-persian-pipe";
-import {KeysPipe} from "./pipes/keys.pipe";
+import {RestClientModule} from "../services/rest-client/rest-client.module";
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
@@ -63,6 +64,7 @@ const NB_MODULES = [
 
 const CUSTOM_MODULES = [
   PersianPipesModule,
+  RestClientModule,
 ];
 
 const COMPONENTS = [
