@@ -39,6 +39,7 @@ import {
 } from './layouts';
 import { DEFAULT_THEME } from './styles/theme.default';
 import { COSMIC_THEME } from './styles/theme.cosmic';
+import {PersianPipesModule} from "ngx-persian-pipe";
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
@@ -57,6 +58,10 @@ const NB_MODULES = [
   NbContextMenuModule,
   NgbModule,
   NbSecurityModule, // *nbIsGranted directive
+];
+
+const CUSTOM_MODULES = [
+  PersianPipesModule,
 ];
 
 const COMPONENTS = [
@@ -94,8 +99,8 @@ const NB_THEME_PROVIDERS = [
 
 
 @NgModule({
-  imports: [...BASE_MODULES, ...NB_MODULES],
-  exports: [...BASE_MODULES, ...NB_MODULES, ...COMPONENTS, ...PIPES],
+  imports: [...BASE_MODULES, ...NB_MODULES, ...CUSTOM_MODULES],
+  exports: [...BASE_MODULES, ...NB_MODULES, ...CUSTOM_MODULES, ...COMPONENTS, ...PIPES],
   declarations: [...COMPONENTS, ...PIPES],
 })
 export class ThemeModule {
