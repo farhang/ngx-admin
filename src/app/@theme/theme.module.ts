@@ -2,6 +2,8 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DpDatePickerModule } from 'ng2-jalali-date-picker';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 import {
   NbActionsModule,
@@ -65,6 +67,8 @@ const NB_MODULES = [
 const CUSTOM_MODULES = [
   PersianPipesModule,
   RestClientModule,
+  DpDatePickerModule,
+  NgSelectModule,
 ];
 
 const COMPONENTS = [
