@@ -120,7 +120,7 @@ export class InputPartCreateComponent implements OnInit, AfterViewInit {
   }
 
   getMinorWarehouses(id) {
-    this.restClientService.postService('getSubWareHouse', {id: id}).subscribe(
+    this.restClientService.getService('getSubWareHouseByMainWarehouseId/'+id).subscribe(
       data => {
         this.minorStock = data;
         console.log(data);

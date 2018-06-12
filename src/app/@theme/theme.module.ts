@@ -45,6 +45,8 @@ import { COSMIC_THEME } from './styles/theme.cosmic';
 import {PersianPipesModule} from "ngx-persian-pipe";
 import {RestClientModule} from "../services/rest-client/rest-client.module";
 import {Ng2SmartTableModule} from "ng2-smart-table";
+import {SearchProductModule} from "../pages/components/search-product/search-product.module";
+import {SearchProductComponent} from "../pages/components/search-product/search-product.component";
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
@@ -71,6 +73,7 @@ const CUSTOM_MODULES = [
   DpDatePickerModule,
   NgSelectModule,
   Ng2SmartTableModule,
+  SearchProductModule
 ];
 
 const COMPONENTS = [
@@ -112,6 +115,7 @@ const NB_THEME_PROVIDERS = [
   imports: [...BASE_MODULES, ...NB_MODULES, ...CUSTOM_MODULES],
   exports: [...BASE_MODULES, ...NB_MODULES, ...CUSTOM_MODULES, ...COMPONENTS, ...PIPES],
   declarations: [...COMPONENTS, ...PIPES],
+  entryComponents: [SearchProductComponent],
 })
 export class ThemeModule {
   static forRoot(): ModuleWithProviders {
