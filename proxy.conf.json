@@ -1,0 +1,8 @@
+{
+    "/": {
+        "target": "http://91.98.133.112:3000/",
+        "logLevel": "debug",
+        "secure": false,
+        "changeOrigin": "false"
+    }
+}
