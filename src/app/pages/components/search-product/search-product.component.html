@@ -1,0 +1,16 @@
+<input [ngClass]="inputClass"
+             #productText
+             class="form-control short-input"
+             [name]="cell.getId()"
+             [disabled]="!cell.isEditable()"
+             [placeholder]="cell.getTitle()"
+             (click)="onClick.emit($event)"
+             (keyup)="updateValue()"
+             (keydown.enter)="onEdited.emit($event)"
+             (keydown.esc)="onStopEditing.emit()">
+<ul class="search-query" *ngIf="visibleList">
+  <li class="text-center" *ngIf="loading"><i class="fa fa-spinner fa-spin"></i> </li>
+  <li *ngFor="let item of products" (click)="searchItemClicked(item.name)">
+    {{item.name}}
+  </li>
+</ul>

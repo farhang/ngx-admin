@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { InputPartCreateComponent } from './stocking/input-part-create/input-part-create.component';
 
 const routes: Routes = [{
   path: '',
@@ -11,6 +12,10 @@ const routes: Routes = [{
     {
       path: 'dashboard',
       component: DashboardComponent,
+    },
+    {
+      path: 'input-part-create',
+      component: InputPartCreateComponent,
     },
     {
       path: '',

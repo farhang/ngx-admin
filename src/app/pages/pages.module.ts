@@ -5,9 +5,11 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
+import {InputPartCreateComponent} from "./stocking/input-part-create/input-part-create.component";
 
 const PAGES_COMPONENTS = [
   PagesComponent,
+  InputPartCreateComponent
 ];
 
 @NgModule({
