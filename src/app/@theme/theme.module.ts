@@ -44,6 +44,7 @@ import { DEFAULT_THEME } from './styles/theme.default';
 import { COSMIC_THEME } from './styles/theme.cosmic';
 import {PersianPipesModule} from "ngx-persian-pipe";
 import {RestClientModule} from "../services/rest-client/rest-client.module";
+import {Ng2SmartTableModule} from "ng2-smart-table";
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
@@ -69,6 +70,7 @@ const CUSTOM_MODULES = [
   RestClientModule,
   DpDatePickerModule,
   NgSelectModule,
+  Ng2SmartTableModule,
 ];
 
 const COMPONENTS = [
