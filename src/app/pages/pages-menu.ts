@@ -9,8 +9,8 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         icon: 'fa fa-user',
-        title: 'برنامه ریزی تولید',
-        link: '/',
+        title: 'نوتیف',
+        link: '/pages/components/notifications',
       },
       {
         icon: 'ion-ios-person',

@@ -1,18 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import {Warehouse} from "../../../models/warehouse";
+import { Warehouse} from "../../../models/warehouse";
 import {RestClientService} from "../../../services/rest-client/rest-client.service";
-import {Toast, ToasterConfig, ToasterService, BodyOutputType} from "angular2-toaster";
+import { Toast, ToasterConfig, ToasterService, BodyOutputType } from "angular2-toaster";
 
 import 'style-loader!angular2-toaster/toaster.css';
-
 @Component({
   selector: 'main-stock-create',
   templateUrl: './main-stock-create.component.html',
-  styleUrls: ['./main-stock-create.component.scss']
+  styleUrls: ['./main-stock-create.component.scss'],
 })
 export class MainStockCreateComponent implements OnInit {
   warehouse = new Warehouse();
-  //config: ToasterConfig;
+  config: ToasterConfig;
   constructor(
     private restClientService: RestClientService,
     private toasterService: ToasterService
@@ -38,7 +37,7 @@ export class MainStockCreateComponent implements OnInit {
           title: 'انبار با موفقیت ساخته شد',
           body: 'انبار با موفقیت ساخته شد.',
         };
-        //this.toasterService.popAsync(toast);
+        this.toasterService.popAsync(toast);
       },
       error => {
         console.log(error);

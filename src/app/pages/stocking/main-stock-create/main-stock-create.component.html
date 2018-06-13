@@ -3,6 +3,7 @@
 تعریف انبار اصلی
   </nb-card-header>
   <nb-card-body>
+    <toaster-container [toasterconfig]="config"></toaster-container>
         <form  (ngSubmit)="onSubmit()" #createDocument="ngForm" novalidate>
           <div class="row">
             <div class="col-sm-6">

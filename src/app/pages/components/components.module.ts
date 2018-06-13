@@ -4,17 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { ComponentsRoutingModule, routedComponents } from './components-routing.module';
-import { SearchProductComponent } from './search-product/search-product.component';
 
 @NgModule({
   imports: [
     ThemeModule,
     ComponentsRoutingModule,
-
   ],
   declarations: [
-    ...routedComponents,
-    SearchProductComponent,
+    ...routedComponents
   ],
   providers: [
   ],

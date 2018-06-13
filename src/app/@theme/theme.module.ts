@@ -47,6 +47,7 @@ import {RestClientModule} from "../services/rest-client/rest-client.module";
 import {Ng2SmartTableModule} from "ng2-smart-table";
 import {SearchProductModule} from "../pages/components/search-product/search-product.module";
 import {SearchProductComponent} from "../pages/components/search-product/search-product.component";
+import {ToasterModule} from "angular2-toaster";
 
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
@@ -73,7 +74,8 @@ const CUSTOM_MODULES = [
   DpDatePickerModule,
   NgSelectModule,
   Ng2SmartTableModule,
-  SearchProductModule
+  SearchProductModule,
+  ToasterModule
 ];
 
 const COMPONENTS = [

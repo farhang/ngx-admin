@@ -5,15 +5,15 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
-import {InputPartCreateComponent} from "./stocking/input-part-create/input-part-create.component";
-import {InputPartComponent} from "./stocking/input-part/input-part.component";
-import {MainStockCreateComponent} from "./stocking/main-stock-create/main-stock-create.component";
+import { InputPartCreateComponent } from "./stocking/input-part-create/input-part-create.component";
+import { InputPartComponent } from "./stocking/input-part/input-part.component";
+import { MainStockCreateComponent } from "./stocking/main-stock-create/main-stock-create.component";
 
 const PAGES_COMPONENTS = [
   PagesComponent,
   InputPartCreateComponent,
   InputPartComponent,
-  MainStockCreateComponent
+  MainStockCreateComponent,
 ];
 
 @NgModule({
