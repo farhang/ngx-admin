@@ -8,12 +8,14 @@ import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { InputPartCreateComponent } from "./stocking/input-part-create/input-part-create.component";
 import { InputPartComponent } from "./stocking/input-part/input-part.component";
 import { MainStockCreateComponent } from "./stocking/main-stock-create/main-stock-create.component";
+import {SubStockCreateComponent} from "./stocking/sub-stock-create/sub-stock-create.component";
 
 const PAGES_COMPONENTS = [
   PagesComponent,
   InputPartCreateComponent,
   InputPartComponent,
   MainStockCreateComponent,
+  SubStockCreateComponent,
 ];
 
 @NgModule({

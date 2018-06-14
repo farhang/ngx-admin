@@ -67,12 +67,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
           {
             icon: 'nb-person',
             title: 'انبار اصلی',
-            link: 'stocking/MainStockCreate',
+            link: 'stocking/mainStockCreate',
           },
           {
             icon: 'nb-keypad',
             title: 'انبار فرعی',
-            link: '/',
+            link: 'stocking/subStockCreate',
           }
         ],
       },

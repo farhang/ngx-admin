@@ -4,3 +4,11 @@ export class Warehouse {
   address: string;
 constructor() {}
 }
+
+export class  subWarehouse {
+  wareHouseName: string;
+  code: number;
+  address: string;
+  parent: string;
+  constructor() {}
+}
