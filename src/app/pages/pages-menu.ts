@@ -146,12 +146,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
           {
             icon: 'nb-person',
             title: 'تعریف پرسنل',
-            link: '/',
+            link: 'personnel/create',
           },
           {
             icon: 'nb-keypad',
             title: 'تعریف گروه پرسنل',
-            link: '/',
+            link: 'personnelGroup/create',
           }
         ],
       },

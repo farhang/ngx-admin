@@ -1,0 +1,59 @@
+<nb-card>
+  <nb-card-header>
+    تعریف گروه پرسنل
+  </nb-card-header>
+  <nb-card-body>
+    <toaster-container [toasterconfig]="config"></toaster-container>
+    <form  (ngSubmit)="onSubmit()" #personelGroup="ngForm" novalidate>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>نام گروه پرسنل</label>
+            <input [(ngModel)]="personnelGroup.name" name="name" type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>کد</label>
+            <input [(ngModel)]="personnelGroup.name" name="name" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>کد</label>
+            <input [(ngModel)]="personnelGroup.code" name="code" type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>توضیحات</label>
+            <input [(ngModel)]="personnelGroup.description" name="description" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="col-sm-12">
+          <div class="form-group">
+            <label>فرمول کنتراتی</label>
+            <input [(ngModel)]="personnel.contratFormula" name="contratFormula" type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label>مبلغ ثبت</label>
+            <input [(ngModel)]="personnel.registerAmount" name="registerAmount" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="col-sm-6 m-t-30">
+          <button type="submit" class="btn btn-success f-left"> ثبت </button>
+          <button type="button" (click)="onCancel()" class="btn m-l-10 btn-primary f-left" > انصراف </button>
+        </div>
+      </div>
+    </form>
+  </nb-card-body>
+</nb-card>

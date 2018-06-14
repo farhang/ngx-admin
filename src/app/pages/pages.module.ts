@@ -9,6 +9,8 @@ import { InputPartCreateComponent } from "./stocking/input-part-create/input-par
 import { InputPartComponent } from "./stocking/input-part/input-part.component";
 import { MainStockCreateComponent } from "./stocking/main-stock-create/main-stock-create.component";
 import {SubStockCreateComponent} from "./stocking/sub-stock-create/sub-stock-create.component";
+import { PersonnelComponent } from './personel/personel/personnel.component';
+import { PersonnelGroupComponent } from './personel/personnel-group/personnel-group.component';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -16,6 +18,8 @@ const PAGES_COMPONENTS = [
   InputPartComponent,
   MainStockCreateComponent,
   SubStockCreateComponent,
+  PersonnelComponent,
+  PersonnelGroupComponent
 ];
 
 @NgModule({
