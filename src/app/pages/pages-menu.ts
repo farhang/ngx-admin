@@ -77,6 +77,27 @@ export const MENU_ITEMS: NbMenuItem[] = [
         ],
       },
       {
+        icon: 'nb-person',
+        title: 'واحد ها',
+        children: [
+          {
+            icon: 'nb-person',
+            title: 'واحد اصلی',
+            link: 'stocking/mainStockCreate',
+          },
+          {
+            icon: 'nb-keypad',
+            title: 'واحد فرعی',
+            link: 'stocking/subStockCreate',
+          }
+        ],
+      },
+      {
+        icon: 'nb-person',
+        title: 'روش تولید',
+        link: 'stocking/mainStockCreate',
+      },
+      {
         icon: 'nb-keypad',
         title: 'کالا',
         children: [
