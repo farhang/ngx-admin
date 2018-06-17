@@ -36,7 +36,6 @@ export class SearchProductComponent  extends DefaultEditor implements AfterViewI
           this.visibleList = true;
           this.loading = false;
           this.products =data;
-          console.log(data);
         },
         error => {
           this.loading = false;
@@ -50,7 +49,6 @@ export class SearchProductComponent  extends DefaultEditor implements AfterViewI
   }
 
   searchItemClicked(item) {
-    console.log(item);
     this.visibleList = false;
     this.productText.nativeElement.value = item;
   }

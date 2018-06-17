@@ -8,6 +8,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
+    title: 'ورود',
+    link: '/auth/login',
+    icon: 'fa fa-users',
+  },
+  {
     title: 'کاندیدها',
     icon: 'fa fa-users',
   },

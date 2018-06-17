@@ -25,7 +25,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.todayDate);
     this.userService.getUsers()
       .subscribe((users: any) => {
       this.user = users.nick;
@@ -40,7 +39,6 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleSidebar(): boolean {
-    console.log('fasdfsad');
     this.sidebarService.toggle(true, 'menu-sidebar');
     return false;
   }

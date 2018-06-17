@@ -1,12 +1,14 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NbAuthModule, NbDummyAuthProvider } from '@nebular/auth';
+import { NbAuthModule,  NbDummyAuthStrategy } from '../@theme/framework/auth';
 import { NbSecurityModule, NbRoleProvider } from '@nebular/security';
 import { of as observableOf } from 'rxjs';
 
 import { throwIfAlreadyLoaded } from './module-import-guard';
 import { DataModule } from './data/data.module';
 import { AnalyticsService } from './utils/analytics.service';
+import {NbDummyAuthStrategyOptions} from "../@theme/framework/auth/strategies/dummy/dummy-strategy-options";
+import {NbAuthSimpleToken} from "../@theme/framework/auth/services/token/token";
 
 const socialLinks = [
   {
@@ -33,26 +35,24 @@ export class NbSimpleRoleProvider extends NbRoleProvider {
   }
 }
 
+// declare dummy strategy.
+const strategyOptions = new NbDummyAuthStrategyOptions();
+strategyOptions.name = 'dummy';
+
 export const NB_CORE_PROVIDERS = [
   ...DataModule.forRoot().providers,
   ...NbAuthModule.forRoot({
-    providers: {
-      email: {
-        service: NbDummyAuthProvider,
-        config: {
-          delay: 3000,
-          login: {
-            rememberMe: true,
-          },
-        },
-      },
-    },
+    strategies: [
+      NbDummyAuthStrategy.setup(strategyOptions)
+    ],
     forms: {
       login: {
-        socialLinks: socialLinks,
+        strategy: 'dummy',
+      },
+      logout: {
+        strategy: 'dummy',
       },
       register: {
-        socialLinks: socialLinks,
       },
     },
   }).providers,
